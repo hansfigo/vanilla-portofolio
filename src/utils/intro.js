@@ -34,7 +34,7 @@ export const runIntro = () => {
                 targets: loadingElement,
                 easing: 'easeOutQuart',
                 top: '1000px',
-                loop: true,
+                duration : 2000
             });
         }, 2000);
 
