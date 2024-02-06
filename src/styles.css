@@ -1,0 +1,200 @@
+:root {
+    --background-color: #060b12;
+    --max-width: 60rem;
+}
+
+/* @font-face {
+    font-family: 'MoonGet';
+    src: url('../static/moon_get-Heavy.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+@font-face {
+    font-family: 'MarkPro';
+    src: url('../static/MarkPro-Heavy.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, var(--background-color), #0d1823);
+    color: #eaebf2;
+    display: flex;
+    justify-content: center;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin: 0px;
+}
+
+header {
+    position: fixed;
+    width: 80%;
+    height: 5rem;
+    overflow: hidden;
+    display: flex;
+    left: 50%;
+    top: 26px;
+    transform: translateX(-50%);
+    backdrop-filter: blur(16px);
+    border-radius: 40px;
+    box-shadow: 0 2px 25px rgba(33, 33, 33, 0.5);
+    z-index: 50;
+}
+
+header>div>p {
+    background: -webkit-linear-gradient(#ffffff, #cfd7ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+ul,
+a {
+    all: unset;
+}
+
+header>div {
+    all: unset;
+    padding: 1rem 3rem 1rem 3rem;
+}
+
+header>div>img {
+    height: 2.6rem;
+    width: 2.6rem;
+}
+
+main {
+    width: 100%;
+    max-width: var(--max-width);
+    z-index: 0;
+    /* padding-top: 80px; */
+}
+
+h1 {
+    font-size: 4.6rem;
+    font-family: 'MarkPro', sans-serif;
+    letter-spacing: -0.2rem;
+    /* text-transform: uppercase; */
+    line-height: 4rem;
+}
+
+
+
+h3 {
+    font-family: 'MarkPro', sans-serif;
+}
+
+
+.navbar-height {
+    height: 100px;
+}
+
+.font-main {
+    font-family: 'MarkPro', sans-serif;
+}
+
+.cursor {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    border-radius: 99rem;
+    top: 40%;
+    right: 20%;
+    pointer-events: none;
+    border: rgb(96, 5, 255);
+    border-style: solid;
+    transition: transform 0.2s ease-in-out, color 0.3s ease-in-out;
+    z-index: 99;
+    transform: scale(1);
+
+    @media only screen and (max-width: 52.5em) {
+        opacity: 0;
+    }
+}
+
+.cursor.clicked {
+    border: rgb(150, 90, 255);
+    border-style: solid;
+    transform: scale(1.5);
+}
+
+
+.section-2 {
+    opacity: 0;
+    transition: all 3000ms;
+}
+
+#canvas:hover {
+    cursor: grab;
+}
+
+.lerp-wrap {
+    line-height: 0.6;
+}
+
+.lerp-wrap span {
+    position: relative;
+    display: inline-flex;
+    margin-right: 0.8rem;
+}
+
+#my-svg {
+    cursor: pointer;
+    z-index: 99;
+}
+
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+.particle {
+    animation: floating 3s ease-in-out infinite;
+}
+
+@media screen and (min-width: 768px) {
+
+    body {
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+
+    header {
+        max-width: var(--max-width);
+        width: 100%;
+    }
+
+    .lerp-wrap {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .lerp-wrap span {
+        display: inline-flex;
+    }
+
+}
