@@ -7,6 +7,20 @@
     align-items: center;
 }
 
+.items-start {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+}
+
+.items-baseline {
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    -webkit-align-items: baseline;
+    align-items: baseline;
+  }
+
 .backdrop-blur {
     backdrop-filter: blur(16px);
 }
@@ -14,7 +28,13 @@
 .justify-between {
     justify-content: space-between;
 }
-
+.justify-start {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+  }
+  
 .justify-center {
     justify-content: center;
 }

@@ -35,7 +35,7 @@ header {
     height: 5rem;
     overflow: hidden;
     display: flex;
-    left: 50%;
+    left: 52.5%;
     top: 26px;
     transform: translateX(-50%);
     backdrop-filter: blur(16px);
