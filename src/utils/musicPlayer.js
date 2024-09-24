@@ -6,8 +6,7 @@ export function initializeMusicPlayer(audioSrc) {
   const musicLengthElement = document.getElementById('music-length');
   const progressBar = document.getElementById('progress-bar');
   const progressContainer = document.getElementById('progress-container');
-  const volumeSlider = document.getElementById('volume-slider'); // Menambahkan referensi ke elemen slider volume
-
+  const volumeSlider = document.getElementById('volume-slider'); 
   // volumeSlider.addEventListener('input', function () {
   //   audio.volume = volumeSlider.value / 100;
   // });
@@ -45,7 +44,6 @@ export function initializeMusicPlayer(audioSrc) {
     const clickX = event.clientX - progressBarRect.left;
     const progressBarWidth = progressBarRect.width;
 
-    console.log(progressBarRect.left);
     const clickPercentage = (clickX / progressBarWidth) * 100;
 
     const newTime = (clickPercentage / 100) * audio.duration;
@@ -53,7 +51,6 @@ export function initializeMusicPlayer(audioSrc) {
     // Ensure newTime is within valid range
     audio.currentTime = Math.min(Math.max(newTime, 0), audio.duration - 1);
 
-    // Update progress bar animation
     anime({
       targets: progressBar,
       width: `${(audio.currentTime / audio.duration) * 100}%`,
@@ -73,6 +70,5 @@ export function initializeMusicPlayer(audioSrc) {
     });
   });
 
-  // Setel sumber audio setelah semua event didaftarkan
   audio.src = audioSrc;
 }

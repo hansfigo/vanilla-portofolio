@@ -50,8 +50,6 @@ const controls = new OrbitControls(camera , renderer.domElement )
 controls.enableZoom = false;
 controls.enablePan = false;
 
-console.log(controls);
-
 controls.touches.ONE = THREE.TOUCH.PAN;
 controls.touches.TWO = THREE.TOUCH.DOLLY_ROTATE;
 

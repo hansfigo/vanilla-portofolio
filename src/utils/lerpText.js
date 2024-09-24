@@ -41,7 +41,7 @@ export function lerpTextPerSpace({ text, containerId, spacing, speed, horizontal
             }
             spanElement.style.marginRight = spacing;
             spanElement.setAttribute('data-scroll-speed', speed.toString());
-            spanElement.textContent = word + ' '; // Tambahkan spasi setelah setiap kata
+            spanElement.textContent = word + ' '; 
 
             scrollingTextElement.appendChild(spanElement);
         }

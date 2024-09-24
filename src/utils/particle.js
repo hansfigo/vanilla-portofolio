@@ -7,11 +7,11 @@ export function createRandomParticles(numParticles) {
         var randomScrollSpeed = Math.floor(Math.random() * (30 - 4 + 1)) + 4;
         var scrollSpeedString = randomScrollSpeed.toString();
 
-        // Menentukan posisi acak
+        // rand pos
         var xPos = Math.random() * window.innerWidth;
         var yPos = Math.random() * window.innerHeight;
 
-        // Menentukan warna acak
+        // rand color
         var color = getRandomColor();
         particle.style.backgroundColor = color;
         particle.setAttribute('data-scroll', '');

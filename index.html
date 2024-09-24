@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hnzbyte</title>
     <link rel="stylesheet" href="src/styles.css">
     <link rel="stylesheet" href="src/styles/utility-class.css">
     <link rel="stylesheet" href="src/styles/music-player.css">
@@ -12,7 +12,7 @@
 
     <script defer src="src/utils/anime.min.js"></script>
     <script defer src="src/utils/locomotive-scroll.min.js"></script>
-    
+
     <script type="importmap">
         {
           "imports": {
@@ -20,15 +20,23 @@
             "three/addons/": "https://unpkg.com/three@v0.149.0/examples/jsm/"
           }
         }
-      </script>
+    </script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+
 
     <script defer type="module" src="src/main.js"></script>
 </head>
 
 <body data-scroll-container>
-    <svg id="my-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
-        <circle cx="50" cy="50" r="10" fill="#3498db" />
-    </svg>
+    <div id="my-circle"></div>
+
     <div id="loading">
         <svg width="376.6" height="92.15" viewBox="0 0 376.6 92.15" xmlns="http://www.w3.org/2000/svg">
             <g id="svgGroup" stroke-linecap="round" fill-rule="nonzero" font-size="9pt" stroke="#0026ff"
@@ -40,11 +48,9 @@
         </svg>
     </div>
     <div data-scroll-section id="particles"></div>
-    <header id="navbar"></header>
     <div id="cursor" class="cursor"></div>
 
-
-    <div id="player-container">
+    <!-- <div id="player-container">
         <h3>Loveit</h3>
         <div class="flex justify-between">
             <div id="player-ui">
@@ -59,37 +65,90 @@
             <button id="play-pause">Play</button>
         </div>
         <div id="volume-control">
-            <!-- <input type="range" id="volume-slider" min="0" max="100" value="100" orient="vertical"> -->
+            <input type="range" id="volume-slider" min="0" max="100" value="100" orient="vertical">
         </div>
         <audio id="audio" src="/static/loveit.mp3"></audio>
+    </div> -->
+
+    <div class="hamburger-popper">
+        <button id="close-btn" style="font-size: 2rem;">x</button>
+        <div class="flex flex-col justify-center items-center">
+            <a class="nav-link">About</a>
+            <a class="nav-link">Projects</a>
+            <a class="nav-link">Contact</a>
+        </div>
     </div>
 
+    <header>
+        <nav class="flex justify-between items-center w-full ">
+            <p class="font-main text-2xl">hnzbyte</p>
+            <div class="nav-links">
+                <a class="nav-link">About</a>
+                <a class="nav-link">Projects</a>
+                <a class="nav-link">Contact</a>
+            </div>
+
+            <button class="hamburger-menu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </button>
+        </nav>
+    </header>
 
     <main class="w-full" data-scroll-section>
-        <section class="h-screen flex flex-col justify-center" data-scroll-section data-scroll>
-            <h1 data-scroll-speed="1" data-scroll class="lerp-wrap" id="hero-main-text"></h1>
-            <h3 data-scroll-speed="12" data-scroll class="lerp-wrap" id="hero-name"></h3>
-        </section>
-        <section data-scroll-section class="flex flex-col justify-center items-center h-screen w-full">
-            <h3 data-scroll data-scroll-speed="1" style=" animation: floating 1.8s ease-in-out infinite;
+        <div id="content">
+            <section class="h-screen flex flex-col justify-center" data-scroll-section data-scroll>
+                <h1 data-scroll-speed="1" data-scroll class="lerp-wrap" id="hero-main-text"></h1>
+                <h3 data-scroll-speed="12" data-scroll class="lerp-wrap" id="hero-name"></h3>
+            </section>
+            <section data-scroll-section class="flex flex-col justify-center items-center w-full  ">
+                <h3 data-scroll data-scroll-speed="1" style=" animation: floating 1.8s ease-in-out infinite;
             ">I like this 👇</h3>
-            <div data-scroll data-scroll-speed="2" id="canvas"></div>
-        </section>
-        <section class="h-screen justify-center items-center flex section-2" data-scroll>
-            <h2 data-scroll data-scroll-call="section-2">What's up?</h2>
-            <p>😬</p>
-        </section>
-        <footer class="h-screen justify-start bg-red items-baseline flex w-full border-tF-2 border-white" >
-            <h1>HNZBYTE</h1>
-            <div>
-                <h3>Test</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure soluta obcaecati eveniet, rerum aliquam sit minus. Perspiciatis libero magnam exercitationem magni modi itaque vitae, alias placeat! Veniam voluptatibus cum rem!F</p>
-            </div>
-        </footer>
-    </main>
-    <footer>
+                <div data-scroll data-scroll-speed="2" id="canvas"></div>
+            </section>
+            <section id="about" class="min-h-screen items-center flex flex-col  section-2  " data-scroll>
+                <div>
+                    <h2 data-scroll data-scroll-call="section-2" class="poppins-bold">What's up? 😬</h2>
+                </div>
+                <p class="poppins-light" style="font-size: 1.2rem;">Hey, I’m Figo, a front-end dev into Sveltekit, Next.js, React, and Tailwind. I
+                    love building
+                    user-friendly interfaces and working on personal projects to keep learning. Always up for new
+                    challenges and collaborations!</p>
+            </section>
+            <section id="projects" class="min-h-screen items-center flex section-3 justify-between project-section  "
+                data-scroll data-scroll-call="section-3">
+                <div>
+                    <h2 style="min-width: 12rem;">My Projects 😬</h2>
+                </div>
+                <aside class="project-list" id="project-list">
+                </aside>
+            </section>
+            <section style="height: 30rem;">
 
+            </section>
+        </div>
+    </main>
+    <footer id="contact" class="" data-scroll-section>
+        <h1>HNZBYTE</h1>
+        <div>
+            <p class="poppins-light">
+                <span>
+                    👤 @hans.Figo
+                </span>
+                <br>
+                <span>
+                    ✉️ claudiofigo0303@gmail.com
+                </span>
+                <br>
+                <br>
+                <span>
+                    2024
+                </span>
+            </p>
+        </div>
     </footer>
+
 </body>
 
 </html>

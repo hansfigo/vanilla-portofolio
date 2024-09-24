@@ -50,7 +50,6 @@ export function useCursor() {
     window.onmousemove = throttle(animateCursor, 50);
 
     window.addEventListener("click", () => {
-        console.log("logged");
         anime({
             targets: '#cursor',
             scale: 2,

@@ -33,7 +33,7 @@ export const runIntro = () => {
             anime({
                 targets: loadingElement,
                 easing: 'easeOutQuart',
-                top: '1000px',
+                top: '3000px',
                 duration : 2000
             });
         }, 2000);
@@ -52,7 +52,6 @@ export const runIntro = () => {
 
 //     function handleLoadStatus() {
 //         loadedScripts++;
-//         console.log(scripts);
 //         if (loadedScripts === scripts.length) {
 //             setTimeout(() => {
 //                 loadingElement.style.display = "none";
